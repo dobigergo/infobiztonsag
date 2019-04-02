@@ -1,3 +1,4 @@
+
 def euklidesz(a,b):
 	if a < b:
 		a,b=b,a
@@ -20,4 +21,24 @@ def euklideszp(a):
 	
 	return y[len(y)-1]
 	
-print(euklidesz(100,519)," ",euklideszp(euklidesz(100,519)))
+print(euklidesz(4658923553523,254124222)," ",euklideszp(euklidesz(4658923553523,254124222)))
+
+def s_and_m(g,e,n):
+	bin_e=bin(e)
+	list_bin_e=list(bin_e)
+	list_bin_e.pop(0)
+	list_bin_e.pop(0)
+	mod=1
+	tmp=g
+	for i in range(len(list_bin_e)):
+		if list_bin_e[len(list_bin_e)-1-i]=='1':
+			mod*=tmp
+		tmp=(tmp**2)%215		
+	return mod%n
+
+print(s_and_m(12712543312,7531213515,2151531))
+
+
+
+
+
