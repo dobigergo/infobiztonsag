@@ -36,7 +36,7 @@ def is_prime(n, k=128):
         return False
     s = 0
     r = n - 1
-    while r & 1 == 0:
+    while r%2 == 0:
         s += 1
         r //= 2
     # do k tests
